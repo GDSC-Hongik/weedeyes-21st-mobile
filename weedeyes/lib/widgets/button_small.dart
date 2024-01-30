@@ -13,7 +13,7 @@ class ButtonSmall extends StatelessWidget {
           fixedSize: const Size(144, 56),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-          backgroundColor: Color.fromRGBO(52, 220, 118, 1),
+          backgroundColor: const Color.fromRGBO(52, 220, 118, 1),
         ),
         child: Text(
           "$text",

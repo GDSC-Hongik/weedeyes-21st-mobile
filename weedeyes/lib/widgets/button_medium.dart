@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ButtonMedium extends StatelessWidget {
   final String? text;
-  const ButtonMedium({Key? key, this.text});
+  const ButtonMedium({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ButtonMedium extends StatelessWidget {
           fixedSize: const Size(300, 56),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-          backgroundColor: Color.fromRGBO(52, 220, 118, 1),
+          backgroundColor: const Color.fromRGBO(52, 220, 118, 1),
         ),
         child: Text(
           "$text",
