@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ButtonSmall extends StatelessWidget {
   final String? text;
-  const ButtonSmall({super.key, required this.text});
+  final double size;
+  const ButtonSmall({super.key, required this.text, this.size = 144});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class ButtonSmall extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          fixedSize: const Size(144, 56),
+          fixedSize: Size(size, 56),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           backgroundColor: const Color.fromRGBO(52, 220, 118, 1),
