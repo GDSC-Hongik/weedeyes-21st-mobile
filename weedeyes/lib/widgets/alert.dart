@@ -23,7 +23,7 @@ class Alert extends StatelessWidget {
     return Container(
       width: 375,
       height: 470,
-      padding: const EdgeInsets.fromLTRB(24, 48, 24, 12),
+      padding: const EdgeInsets.fromLTRB(24, 24, 24, 12),
       decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -34,20 +34,25 @@ class Alert extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              width: 160,
-              height: 160,
-              child: Container(decoration: BoxDecoration(color: Colors.grey)),
+              width: 144,
+              height: 144,
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(20))),
             ),
             SizedBox(
               width: 160,
+              height: 160,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
                     PLACE["name"]!,
                     softWrap: true,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                   Text(
@@ -69,7 +74,7 @@ class Alert extends StatelessWidget {
           child: const Text(
             "대마 위험",
             style: TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
           ),
         ),
         Text(Danger[int.parse(PLACE["danger"]!)]),
