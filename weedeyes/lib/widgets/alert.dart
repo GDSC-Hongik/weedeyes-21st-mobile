@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:weedeyes/widgets/button_small.dart';
 
 class Alert extends StatelessWidget {
   Alert({super.key});
 
   final Map<String, String> PLACE = {
+    "id": "1",
     "name": "Greanhead Cannabis",
     "location":
         "149 Thanon Tanao,Wat Bowon Niwet, Phra Nakhon, Bangkok10200 태국 ..",
@@ -20,47 +22,75 @@ class Alert extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 375,
-      padding: EdgeInsets.fromLTRB(24, 48, 24, 12),
-      decoration: BoxDecoration(
+      height: 470,
+      padding: const EdgeInsets.fromLTRB(24, 24, 24, 12),
+      decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(40), topRight: Radius.circular(40))),
-      child: Column(children: [
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            SizedBox(
+              width: 144,
+              height: 144,
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(20))),
+            ),
             SizedBox(
               width: 160,
               height: 160,
-              child: Container(decoration: BoxDecoration(color: Colors.grey)),
-            ),
-            Flexible(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
                     PLACE["name"]!,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    softWrap: true,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
-                  Text(PLACE["location"]!)
+                  Text(
+                    PLACE["location"]!,
+                    softWrap: true,
+                  )
                 ],
               ),
-            )
+            ),
           ],
         ),
         Container(
           width: 328,
           height: 90,
           alignment: Alignment.center,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Color.fromRGBO(237, 93, 93, 1),
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Text(
+          child: const Text(
             "대마 위험",
             style: TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900),
           ),
         ),
         Text(Danger[int.parse(PLACE["danger"]!)]),
-        Row(),
+        const SizedBox(
+          width: 328,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ButtonSmall(
+                text: "확인",
+                size: 156,
+              ),
+              ButtonSmall(text: "취소", size: 156)
+            ],
+          ),
+        ),
       ]),
     );
   }
