@@ -44,3 +44,5 @@ flutter:
           weight: 800
         - asset: assets/fonts/Pretendard-Black.otf
           weight: 900
+  assets:
+    - assets/images/
