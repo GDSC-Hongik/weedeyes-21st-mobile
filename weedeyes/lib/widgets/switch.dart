@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class customSwitch extends StatefulWidget {
+class CustomSwitch extends StatefulWidget {
   @override
   _CustomSwitchState createState() => _CustomSwitchState();
 }
