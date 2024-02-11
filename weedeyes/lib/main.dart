@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weedeyes/cameras.dart';
 import 'package:weedeyes/widgets/button_medium.dart';
 import 'package:weedeyes/widgets/button_small.dart';
 import 'package:weedeyes/widgets/option.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(),
         body: Column(children: [
+          Camera(),
           ButtonSmall(
             text: "확인",
           ),
