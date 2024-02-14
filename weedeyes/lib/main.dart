@@ -9,7 +9,7 @@ import "package:weedeyes/app.dart";
 import "package:weedeyes/initial.dart";
 import "package:weedeyes/auth_camera.dart";
 import "package:weedeyes/auth_location.dart";
-
+import "package:weedeyes/loading.dart";
 
 void main() {
   runApp(Main());
@@ -21,12 +21,11 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
         title: 'Weedeyes',
         theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
             fontFamily: "Pretendard"),
-        home: AuthLocation());
+        home: Loading1());
   }
 }
