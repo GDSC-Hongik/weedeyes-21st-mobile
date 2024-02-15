@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "547490552512",
+    "firebase_url": "https://weedeyes-3d4ca-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "weedeyes-3d4ca",
+    "storage_bucket": "weedeyes-3d4ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547490552512:android:4da2b790717192c14bab25",
+        "android_client_info": {
+          "package_name": "com.example.weedeyes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547490552512-uegapi81mltb3tukhjahe5cq4g9l80mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1vCbeYoUg9VjMUgxRsNLuCDvn2BzKcpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547490552512-uegapi81mltb3tukhjahe5cq4g9l80mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

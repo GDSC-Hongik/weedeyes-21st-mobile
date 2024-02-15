@@ -32,7 +32,10 @@ class Search extends StatelessWidget {
                   style: TextStyle(fontSize: 16),
                   controller: controll,
                   decoration: const InputDecoration(
-                      hintText: "검색", border: InputBorder.none),
+                      hintText: "검색",
+                      border: InputBorder.none,
+                      isDense: true,
+                      contentPadding: EdgeInsets.fromLTRB(0, 6, 0, 6)),
                 ),
               ),
               const SizedBox(

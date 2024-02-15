@@ -1,18 +1,13 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
+import 'package:firebase_core/firebase_core.dart';
 
-import 'package:weedeyes/cameras.dart';
-import 'package:weedeyes/widgets/button_medium.dart';
-import 'package:weedeyes/widgets/button_small.dart';
-import 'package:weedeyes/widgets/option.dart';
-import 'package:weedeyes/widgets/search.dart';
-import "package:weedeyes/app.dart";
-import "package:weedeyes/initial.dart";
-
-import "package:weedeyes/auth_camera.dart";
-import "package:weedeyes/auth_location.dart";
 import "package:weedeyes/loading.dart";
+import "package:weedeyes/pages/maps.dart";
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(Main());
 }
 
@@ -27,6 +22,6 @@ class Main extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
             fontFamily: "Pretendard"),
-        home: Loading1());
+        home: Maps());
   }
 }

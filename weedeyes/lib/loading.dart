@@ -1,7 +1,21 @@
 import "package:flutter/material.dart";
+import "package:weedeyes/app.dart";
 
-class Loading1 extends StatelessWidget {
-  const Loading1({super.key});
+import "dart:async";
+
+class Loading extends StatefulWidget {
+  @override
+  _LoadingState createState() => _LoadingState();
+}
+
+class _LoadingState extends State<Loading> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => App()));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
